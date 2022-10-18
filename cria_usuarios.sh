@@ -2,7 +2,7 @@
 
 # Verifica se o script está sendo executando com o usuário root.
 if [[ $(id -u) -ne 0 ]] ; then
-	echo -e "\n -- Por favor rode o script como root. -- "
+	echo -e "\n -- Por favor, rode o script como root. -- "
 	echo -e " ==> Exemplo: sudo ./$(basename $0)\n"
 	exit 1
 fi
