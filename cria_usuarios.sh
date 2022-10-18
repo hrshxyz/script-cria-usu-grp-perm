@@ -15,6 +15,9 @@ DIRPUBLICO="publico"
 # Dono de todos diretórios
 DONO="root"
 
+# Prefixo Usuarios
+USUARIOS="USUARIOS_"
+
 # Usuários por grupo
 USUARIOS_ADM="carlos maria joao"
 USUARIOS_VEN="debora sebastiana roberto"
@@ -27,7 +30,7 @@ SENHAPADRAO="Senha123"
 PERMTOTAL="777"
 PERMDG="770"
 
-# Grupos 
+# Prefixo Grupos 
 GRP="GRP_"
 
 echo " -- Criando Grupos de trabalho -- "
@@ -66,7 +69,7 @@ echo -e "\n"
 echo " -- Criando usuários -- "
 
 for GRUPO in $DIR; do
-	VARUSU="USUARIOS_${GRUPO^^}"
+	VARUSU="${USUARIOS}${GRUPO^^}"
 	VARGRP="${GRP}${GRUPO^^}"
 	eval "VARUSU=\$${VARUSU}"
 	for USUARIO in ${VARUSU}; do
